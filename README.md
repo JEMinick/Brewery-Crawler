@@ -8,10 +8,10 @@ With a group we are supposed to create a working application/website using at le
 [The Brewery Crawler Slideshow](https://docs.google.com/presentation/d/1OPen-5nErSKnakDWRMNVYEL_i9Kgt6P76AvBUQKkM6I/edit?usp=sharing)
 
 ### The active link to the Brewery Crawler app:
-[Brewery Crawler app](https://arecee3.github.io/mybreweries/)
+[Brewery Crawler app](https://jeminick.github.io/Brewery-Crawler/)
 
 ### Our gitHub for this project:
-[Brewery Crawler GitHub](https://github.com/arecee3/mybreweries)
+[Brewery Crawler GitHub](https://github.com/JEMinick/Brewery-Crawler)
 
 ## Run down
 to make an appliction that will give nearest brewery location and information (brewery name web address etc.) by user zip code, also display location on map to display application results.
