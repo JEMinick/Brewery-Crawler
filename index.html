@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+  
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Font Awesome CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="./css/brewery.css">
+
+    <title>Brewery Crawler</title>
+</head>
+
+<body>
+  
+  <header>
+    <h1>
+      Brewery Crawler
+    </h1>
+</header>
+  
+  <div class="container">
+    
+    <div class="row">
+        <div class="col s12 m12">
+          
+          <!-- <div class="card blue-grey darken-1"> -->
+          <div class="card teal lighten-2">
+
+            <div id="idBreweryCard" class="card-content white-text">
+              
+              <div class="row">
+                <div class="col s5">
+                  <img id="beerPic" 
+                    src=".\assets\images\BeerMug(xSmall).jpg"
+                    alt="Beer Mug Picture">
+                </div>
+                <div class="col s7">
+                  <span id="idBreweryName" class="card-title">Brewery Info</span>
+                </div>
+              </div>
+
+              <p>
+                  <div id="idStreet"></div>
+                  <div id="idCityStateZip"></div>
+              </p>
+              
+            </div>
+
+            <div id="idBreweryWebLink" class="card-action">
+            </div>
+
+          </div>
+        </div> <!-- col s12 m12 -->
+    </div> <!-- row -->
+    
+    <div class="row">
+        
+        <!-- ==================================================================================================================================== -->
+        <!--    S E A R C H     C R I T E R I A     a n d     R E S U L T S   -->
+
+        <div class="col s12 m6">
+
+            <div class="col s12 teal lighten-4">
+              <label><span class="teal-text text-lighten-5">Type of brewery:</span></label>
+              <select name="breweryType" id="breweryType" type="submit" name="action">
+                  <option value="all_types">ALL Brewery Types!</option>
+                  <option value="micro">Micro-Brewery</option>
+                  <option value="regional">Regional</option>
+                  <option value="brewpub ">On-Premise Brewery</option>
+                  <option value="large ">Main Stream (e.g., Miller)</option>
+                  <option value="planning">Planned Brewery</option>
+                  <option value="bar">Bar (w/o Equipment)</option>
+                  <option value="contract">Contracted</option>
+                  <option value="proprietor">Proprietor</option>
+                  <option value="closed">Closed</option>
+              </select>
+            </div>
+            
+            <!-- <div class="divider"></div> -->
+            
+            <!-- <div id="searchByState"> -->
+                <!-- <select name="breweryState" id="breweryState"></select>  -->
+            <!-- </div> -->
+            
+            <div class="row">
+              <div class="col s12 m12">
+                
+                <!-- <div class="card blue-grey darken-1"> -->
+                <div class="card teal lighten-4">
+      
+                  <div id="idZipCodeCard" class="card-content white-text">
+                    
+                    <div class="col s12 m12">
+                      <span id="idBreweryCriteria" class="card-title teal-text text-darken-1 teal lighten-5">Brewery Locator</span>
+                      <div class="divider"></div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="input-field col s12 m12 teal-text text-lighten-5">
+                          <input placeholder="Enter zip code" id="zipCodeInput" type="text" class="validate">
+                          <label for="zipCodeInput"><div class="col s12 m12 teal-text text-lighten-5">Zip-Code to search:</div></label>
+                        </div>
+                        <div class="col s12">
+                          <button id="btnZipSearch" class="btn col s12 m12 waves-effect waves-light" type="submit" name="action">Search
+                            <i class="material-icons right">send</i>
+                          </button>
+                        </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- <div class="row">
+                <div class="divider"></div>
+            </div> -->
+            
+            <!-- <button id="btnClearList" class="btn waves-effect waves-light indigo darken-2" type="button" name="action"> -->
+            <button id="btnClearList" class="btn waves-effect waves-light lighten-2" type="button" name="action">
+                Clear search list:
+                <i class="material-icons right"></i>
+            </button>
+            
+            <div>
+                <div id="zipCodeSearch" class="col s12 teal lighten-2"></div>
+            </div>
+            
+        </div> <!-- <div class="col s12 m6"> -->
+        
+        <!-- ==================================================================================================================================== -->
+        <!--    M A P     D I S P L A Y   -->
+
+        <div class="col s12 m6">
+            
+            <div class="row">
+                <div class="col s12 m12">
+                    
+                    <div class="idBreweryMap">
+                      <div id="map-container" style="position:relative;width: 100%;height: 600px;">
+                        <div id="map" style="position:absolute;width:100%">
+                        </div>
+                        <style>
+                          body #map 
+                          { 
+                            position: absolute; height: 600px; width: 100%;
+                          }
+                        </style>
+                      </div>
+                    </div>
+                    
+                </div>
+                
+            </div> <!-- col-5 -->
+        </div> <!-- <div class="col s12 m6"> -->
+
+        <!-- ==================================================================================================================================== -->
+    
+    </div> <!-- class <row> -->
+    
+    </div> <!-- class container -->
+
+  </div> <!-- class container -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+  
+
+    <script src="./js/brewery.js"></script>
+    
+</body> 
+
+</html>

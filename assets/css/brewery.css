@@ -1,0 +1,99 @@
+:root {
+  --white: #fff;
+  --dark-blue: #180b4b;
+  --tan: #d8a47f;
+  --dark-teal: #00695c;
+  font-size: large;
+}
+
+body #map {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+}
+
+h1 {
+  background-color: var(--dark-teal);
+  color: var(--white);
+  text-align: center;
+  margin-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+p {
+  margin: 2px 2px;
+  padding: 1px 1px;
+  font-weight: bold;
+}
+
+#idBreweryName {
+  font-size: 40px;
+}
+
+#idBreweryCriteria {
+  text-align: center;
+}
+
+.idBreweryMap {
+  margin-top: 1px;
+}
+
+.zip-code-name {
+  text-align: center;
+}
+
+.brewery-button {
+  margin-top: 10px;
+}
+
+.divider {
+  margin-bottom: 10px;
+}
+
+body {
+    font-family: Arial;
+    font-size: 120%;
+  }
+  
+  a {
+    color: #563d7c;
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+  
+  a:hover {
+    color: #8570a5;
+  }
+
+  
+/* ------------------------------ */
+/* --- Need to be responsive: --- */
+/* ------------------------------ */
+
+@media screen and (max-width: 800px)
+{
+  #idBreweryName {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 575px)
+{
+  h1 {
+    font-size: 28px;
+  }
+  .container {
+    min-width: 320px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #idBreweryName {
+    font-size: 30px;
+  }
+  .idBreweryMap {
+    margin-top: 20px;
+  }
+}
