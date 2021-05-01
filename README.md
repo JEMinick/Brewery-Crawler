@@ -28,3 +28,5 @@ to make the website more dynamic we have implmented a drop-down menu so the user
 
 ![Screen shot:](./assets/images/screen-shot.png?raw=true)
 
+#LICENSE
+[License Info](./LICENSE)
