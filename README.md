@@ -13,18 +13,21 @@ With a group we are supposed to create a working application/website using at le
 ### Our gitHub for this project:
 [Brewery Crawler GitHub](https://github.com/JEMinick/Brewery-Crawler)
 
+### Group Project Award:
+[Brewery Crawler Award](./assets/images/UCSD-FSBC-Project1-Award-2-BreweryCrawler.mp4)
+
 ## Run down
-to make an appliction that will give nearest brewery location and information (brewery name web address etc.) by user zip code, also display location on map to display application results.
+Creating an appliction that will provide the nearest brewery location and information (brewery name web address etc.) by user zip code, also display location on map to display application results.
 
-## third party API's used in this group project 
- https://www.openbrewerydb.org/ <br/>
- https://docs.mapbox.com/api/overview/
+## 3rd Party API's used in this group project 
+  https://www.openbrewerydb.org/ <br/>
+  https://docs.mapbox.com/api/overview/
 
-## third party CSS framworks used in this group project 
+## 3rd Party CSS frameworks used in this group project 
   https://materializecss.com/
   
-## app functionality
-to make the website more dynamic we have implmented a drop-down menu so the user can specify which criteria best suits for desired search. User must enter at least one choice to run the script, the script will run when a user selects criteria then desired zip code and clicks "search button" the search functionalty will get real time information       using the brewery API database, it will display breweries by zipcode along with brewery information. This is also where our 2nd third party API starts to function, in this case mapbox API is used to display map with with breweries. 
+## Functionality
+To make the website more dynamic we have implmented a drop-down menu so the user can specify which criteria best suits for desired search. User must enter at least one choice to run the script, the script will run when a user selects criteria then desired zip code and clicks "search button" the search functionalty will get real time information using the brewery API database, it will display breweries by zipcode along with brewery information. This is also where the 2nd third party API starts to function, in this case mapbox API is used to display visual map with with the breweries found.
 
 ![Screen shot:](./assets/images/screen-shot.png?raw=true)
 
