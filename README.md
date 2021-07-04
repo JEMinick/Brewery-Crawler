@@ -13,8 +13,8 @@ With a group we are supposed to create a working application/website using at le
 ### Our gitHub for this project:
 [Brewery Crawler GitHub](https://github.com/JEMinick/Brewery-Crawler)
 
-### Group Project Award:
-[Brewery Crawler Award](./assets/images/UCSD-FSBC-Project1-Award-2-BreweryCrawler.mp4)
+### Group Project Awards:
+[Brewery Crawler Award](https://youtu.be/oV0FjgtK5p4)
 
 ## Run down
 Creating an appliction that will provide the nearest brewery location and information (brewery name web address etc.) by user zip code, also display location on map to display application results.
